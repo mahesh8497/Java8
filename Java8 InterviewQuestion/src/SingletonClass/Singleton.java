@@ -17,7 +17,10 @@ public class Singleton {
         return instance;
     }
     public static void main(String[] args) {
-		Singleton s=new Singleton();
+		Singleton s= Singleton.getInstance();
+		Singleton s1= Singleton.getInstance();
+		System.out.println("hashcode s"+s.hashCode());
+		System.out.println("hashcode s"+s1.hashCode());
 		
 	}
 }
