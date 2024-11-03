@@ -52,6 +52,14 @@ System.out.println("Using Collection map: "+map1);
 //output: {a=4, e=2, v=2, j=2}
 
 
+
+Map<Character, Long> aaa = s.chars()
+		.mapToObj(c->(char)c)
+		.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+System.out.println("Fourth way: "+aaa);
+
+
 	}
 
 }
